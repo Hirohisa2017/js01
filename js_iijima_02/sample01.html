@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>omikuji</title>
+</head>
+<body>
+    <ul>
+        <li id="omikuji">omikuji wo hiku</li>
+        <p id="echo">"echo"</p>
+
+
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $("#omikuji").on("click",function(){
+        
+            const r=Math.ceil(Math.random()*5);
+
+            let view="";
+            if (r==1){
+                view="daikichi";
+            }
+            if (r==2){
+                view="chukichi";
+            }
+            if (r==3){
+                view="shoukichi";
+            }
+            if (r==4){
+                view="kichi";
+            }
+            if (r==5){
+                view="kyo";
+            }
+            $("echo").html(view);
+        });
+            
+
+    </script>
+</body>
+</html>
